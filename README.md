@@ -1,6 +1,9 @@
 # TSTYLA Landing Page
 
-Welcome to the TSTYLA Shoe Customization landing page! This project is primarily focused on learning about scrolling and the intersection observer API in JavaScript. Please note that the design of this landing page may not be the best, as it is not created by a professional designer😅.
+Welcome to the TSTYLA Shoe Customization landing page! This project is primarily focused on learning about scrolling and the intersection observer API in JavaScript. Please note that the design of this landing page may not be the best, as it is not created by a designer😅.
+
+live demo:
+https://bayi-mostapha.github.io/TSTYLA-landing-page/
 
 ## Introduction
 
