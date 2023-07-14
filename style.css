@@ -72,16 +72,25 @@ body {
     left: 0;
     z-index: 100;
     width: 100%;
+}
+
+.warning-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    width: 100%;
+
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .warning {
-    display: none;
     text-align: center;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 101;
+    z-index: 102;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 205, 205);
     padding: 20px;
