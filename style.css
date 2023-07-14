@@ -24,6 +24,46 @@ body {
     color: var(--primary-txt);
 }
 
+.loader {
+    background-color: white;
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+    border-top: 4px solid var(--primary-color);
+    border-right: 4px solid var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+    border-left: 4px solid white;
+
+    animation: spin 1s linear infinite;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .warning-container {
     display: none;
     position: fixed;
@@ -32,16 +72,25 @@ body {
     left: 0;
     z-index: 100;
     width: 100%;
+}
+
+.warning-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    width: 100%;
+
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .warning {
-    display: none;
     text-align: center;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 101;
+    z-index: 102;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 205, 205);
     padding: 20px;

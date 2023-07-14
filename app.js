@@ -1,3 +1,12 @@
+var loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+    loader.style.display = 'none';
+    document.body.classList.remove('hide-overflow')
+});
+
+// *********************************************************************************
+
 const navBarBtn = document.querySelector('.hamburger');
 
 navBarBtn.addEventListener('click', () => {
@@ -201,7 +210,6 @@ faders.forEach(fader => {
 // *********************************************************************************
 const notWorking = document.querySelectorAll('.not-working');
 const warningC = document.querySelector('.warning-container');
-const warning = document.querySelector('.warning');
 let warningState = 'hidden';
 
 notWorking.forEach((item) => {
@@ -217,16 +225,14 @@ notWorking.forEach((item) => {
                 warningState = 'hidden';
                 clearInterval(warningID);
                 document.querySelector('.warning .load-bar').style.width = 0 + 'px';
-                warning.classList.remove('show-error');
                 warningC.classList.remove('show-error');
             }
         }, 30);
 
-        if (warning.classList.contains('show-error') || warningState === 'shown') {
+        if (warningC.classList.contains('show-error') || warningState === 'shown') {
             document.querySelector('.warning .load-bar').style.width = 0 + 'px';
             clearInterval(warningID);
         } else {
-            warning.classList.add('show-error');
             warningC.classList.add('show-error');
             warningState = 'shown';
         }
@@ -235,7 +241,12 @@ notWorking.forEach((item) => {
 
 const removeWarning = document.querySelector('.ok-warning-btn');
 removeWarning.addEventListener('click', () => {
-    warning.classList.remove('show-error');
+    warningC.classList.remove('show-error');
+    warningState = 'hidden';
+})
+
+const removeWarning2 = document.querySelector('.warning-bg');
+removeWarning2.addEventListener('click', () => {
     warningC.classList.remove('show-error');
     warningState = 'hidden';
 })
