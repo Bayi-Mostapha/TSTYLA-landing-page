@@ -1,3 +1,12 @@
+var loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+    loader.style.display = 'none';
+    document.body.classList.remove('hide-overflow')
+});
+
+// *********************************************************************************
+
 const navBarBtn = document.querySelector('.hamburger');
 
 navBarBtn.addEventListener('click', () => {
